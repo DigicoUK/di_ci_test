@@ -23,6 +23,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore .\HelloWorld\HelloWorld.csproj
     - name: Build
-      run: dotnet build --no-restore .\HelloWorld\HelloWorld.csproj
+      run: py build.py
+
     #- name: Test
     #  run: dotnet test --no-build --verbosity normal
