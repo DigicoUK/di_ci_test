@@ -25,14 +25,16 @@ jobs:
     - uses: actions/checkout@v4 
       with: 
         ref: ${{ inputs.branch }}
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: 9.0.x
-    - name: Restore dependencies
-      run: dotnet restore .\HelloWorld\HelloWorld.csproj
+    #- name: Setup .NET
+    #  uses: actions/setup-dotnet@v4
+    #  with:
+    #   dotnet-version: 9.0.x
+    #- name: Restore dependencies
+    #  run: dotnet restore .\HelloWorld\HelloWorld.csproj
     - name: Build
-      run: py build.py "${ inputs.branch }"
 
+      run: py build.py %INPUT_BRANCH%
+      with:
+        branch: ${{ inputs.branch }}
     #- name: Test
     #  run: dotnet test --no-build --verbosity normal
