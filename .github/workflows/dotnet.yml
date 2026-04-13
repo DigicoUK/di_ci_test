@@ -34,6 +34,6 @@ jobs:
     - name: Build
       env:
         DIG_BRANCH: ${{ inputs.branch }}
-      run: py build.py %DIG_BRANCH%
+      run: py build.py ${{ inputs.branch }}
     #- name: Test
     #  run: dotnet test --no-build --verbosity normal
