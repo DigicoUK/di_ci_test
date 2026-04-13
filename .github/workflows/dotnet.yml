@@ -3,11 +3,18 @@
 
 name: .NET
 
-on: workflow_dispatch
+on: 
+  workflow_dispatch:
   #push:
   #  branches: [ "main" ]
   #pull_request:
   #  branches: [ "main" ]
+    inputs:
+      branch:
+        type: string
+        description: Enter a branch 
+        default: main
+
 
 jobs:
   build:
