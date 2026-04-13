@@ -32,7 +32,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore .\HelloWorld\HelloWorld.csproj
     - name: Build
-      run: py build.py ${{ inputs.branch }}
+      run: py build.py "${{ inputs.branch }}"
 
     #- name: Test
     #  run: dotnet test --no-build --verbosity normal
