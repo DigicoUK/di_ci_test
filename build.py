@@ -1,7 +1,7 @@
 import argparse
 
 
-parser = argparse.ArgumentParse(
+parser = argparse.ArgumentParser(
     prog = 'Test',
     description = 'Testing Git Hub Actions')
 parser.add_argument('branch', help='Name of branch to work on')
