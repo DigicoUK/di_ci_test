@@ -32,8 +32,6 @@ jobs:
     #- name: Restore dependencies
     #  run: dotnet restore .\HelloWorld\HelloWorld.csproj
     - name: Build
-      env:
-        DIG_BRANCH: ${{ inputs.branch }}
       run: py build.py ${{ inputs.branch }}
     #- name: Test
     #  run: dotnet test --no-build --verbosity normal
